@@ -8,7 +8,6 @@ import java.util.Arrays;
 public class BinarySearch {
 
     public static <T extends Comparable> int search(T key, T[] data) {
-        Arrays.sort(data);
         int lowIndex = 0;
         int highIndex = data.length - 1;
         while(lowIndex <= highIndex) {
