@@ -1,5 +1,6 @@
 package com.algorithms.search;
 
+import edu.princeton.cs.algs4.StdRandom;
 import org.junit.Test;
 import org.junit.Before;
 
@@ -22,9 +23,11 @@ public class BinarySearchTest {
     private Integer[] largeData;
     private List<Integer> largeKeyList;
 
+    private int[] nsum;
+
     @Before
     public void init() throws Exception {
-        this.keyList = new ArrayList<>();
+        /*this.keyList = new ArrayList<>();
         this.largeKeyList = new ArrayList<>();
 
         List<Integer> dataList = new ArrayList<>();
@@ -55,11 +58,18 @@ public class BinarySearchTest {
         while ((line = largeDataReader.readLine()) != null) {
             largeDataList.add(Integer.parseInt(line.trim()));
         }
-        this.largeData = largeDataList.toArray(new Integer[0]);
+        this.largeData = largeDataList.toArray(new Integer[0]);*/
+
+        int SIZE = 800;
+        int MAX = 1000000;
+        this.nsum = new int[SIZE];
+        for(int i=0;i<SIZE;i++) {
+            this.nsum[i] = StdRandom.uniform(-MAX, MAX);
+        }
     }
 
 
-    @Test
+    //@Test
     public void search() throws Exception {
         assertEquals(0, BinarySearch.search(1, new Integer[]{1, 2, 3}));
         assertEquals(2, BinarySearch.search(3, new Integer[]{1, 2, 3, 4, 5}));
@@ -78,7 +88,7 @@ public class BinarySearchTest {
         }
     }
 
-    @Test(timeout=3000)
+    //@Test(timeout=3000)
     public void largeSeach() throws Exception {
         Arrays.sort(this.largeData);
         int missing = 0;
@@ -90,6 +100,18 @@ public class BinarySearchTest {
             }
         }
         System.out.println(this.largeData.length + ":" + this.largeKeyList.size() + ":" + missing);
+    }
+
+    @Test
+    public void fourSum() {
+        int len = FourSum.get4Sum(this.nsum);
+        System.out.println("Normal " + len);
+    }
+
+    @Test
+    public void fourSumR() {
+        int len = FourSum.get4SumR(this.nsum);
+        System.out.println("Revise " + len);
     }
 
 }
