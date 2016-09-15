@@ -18,19 +18,16 @@ import static org.junit.Assert.*;
  */
 public class BinarySearchTest {
 
-    private Integer[] data;
-    private List<Integer> keyList;
+    public static Integer[] data;
+    public static List<Integer> keyList = new ArrayList<>();
 
-    private Integer[] largeData;
-    private List<Integer> largeKeyList;
+    public static Integer[] largeData;
+    public static List<Integer> largeKeyList = new ArrayList<>();
 
     public static int[] NUM;
 
     @BeforeClass
     public static void init() throws Exception {
-        /*this.keyList = new ArrayList<>();
-        this.largeKeyList = new ArrayList<>();
-
         List<Integer> dataList = new ArrayList<>();
         List<Integer> largeDataList = new ArrayList<>();
 
@@ -41,87 +38,58 @@ public class BinarySearchTest {
 
         String line = null;
         while ((line = keyReader.readLine()) != null) {
-            this.keyList.add(Integer.parseInt(line.trim()));
+            BinarySearchTest.keyList.add(Integer.parseInt(line.trim()));
         }
 
         line = null;
         while ((line = dataReader.readLine()) != null) {
             dataList.add(Integer.parseInt(line.trim()));
         }
-        this.data = dataList.toArray(new Integer[0]);
+        BinarySearchTest.data = dataList.toArray(new Integer[0]);
 
         line = null;
         while ((line = largeKeyReader.readLine()) != null) {
-            this.largeKeyList.add(Integer.parseInt(line.trim()));
+            BinarySearchTest.largeKeyList.add(Integer.parseInt(line.trim()));
         }
 
         line = null;
         while ((line = largeDataReader.readLine()) != null) {
             largeDataList.add(Integer.parseInt(line.trim()));
         }
-        this.largeData = largeDataList.toArray(new Integer[0]);*/
-
-        int SIZE = 10;
-        int MAX = 100;
-        BinarySearchTest.NUM = new int[SIZE];
-        for(int i=0;i<SIZE;i++) {
-            int n = StdRandom.uniform(-MAX, MAX);
-            BinarySearchTest.NUM[i] = n;
-            //System.out.print("," + BinarySearchTest.NUM[i] + " ");
-        }
-        //System.out.println(" ");
+        BinarySearchTest.largeData = largeDataList.toArray(new Integer[0]);
     }
 
-
-    //@Test
+    @Test
     public void search() throws Exception {
         assertEquals(0, BinarySearch.search(1, new Integer[]{1, 2, 3}));
         assertEquals(2, BinarySearch.search(3, new Integer[]{1, 2, 3, 4, 5}));
         assertEquals(3, BinarySearch.search(4, new Integer[]{1, 2, 3, 4, 5}));
         assertEquals(4, BinarySearch.search(5, new Integer[]{1, 2, 3, 4, 5, 6}));
 
-        Arrays.sort(this.data);
-        for (int i = 0; i < this.keyList.size(); i++) {
-            Integer key = this.keyList.get(i);
+        Arrays.sort(BinarySearchTest.data);
+        for (int i = 0; i < BinarySearchTest.keyList.size(); i++) {
+            Integer key = BinarySearchTest.keyList.get(i);
             if (key == 50 || key == 99 || key == 13) {
-                assertEquals(-1, BinarySearch.search(key, this.data));
+                assertEquals(-1, BinarySearch.search(key, BinarySearchTest.data));
 
             } else {
-                assertNotEquals(-1, BinarySearch.search(key, this.data));
+                assertNotEquals(-1, BinarySearch.search(key, BinarySearchTest.data));
             }
         }
     }
 
-    //@Test(timeout=3000)
+    @Test(timeout=3000)
     public void largeSeach() throws Exception {
-        Arrays.sort(this.largeData);
+        Arrays.sort(BinarySearchTest.largeData);
         int missing = 0;
-        for (int i = 0; i < this.largeKeyList.size(); i++) {
-            Integer key = this.largeKeyList.get(i);
-            int index = BinarySearch.search(key, this.largeData);
+        for (int i = 0; i < BinarySearchTest.largeKeyList.size(); i++) {
+            Integer key = BinarySearchTest.largeKeyList.get(i);
+            int index = BinarySearch.search(key, BinarySearchTest.largeData);
             if (index == -1) {
                 missing++;
             }
         }
-        System.out.println(this.largeData.length + ":" + this.largeKeyList.size() + ":" + missing);
-    }
-
-    @Test
-    public void fourSum() {
-        int len = FourSum.get4Sum(BinarySearchTest.NUM);
-        System.out.println("Normal " + len);
-    }
-
-    @Test
-    public void fourSumR() {
-        int len = FourSum.get4SumR(BinarySearchTest.NUM);
-        System.out.println("Revise " + len);
-    }
-
-    @Test
-    public void fourSumR2() {
-        int len = FourSum.fourSumR2(BinarySearchTest.NUM);
-        System.out.println("Revise 2 " + len);
+        System.out.println(BinarySearchTest.largeData.length + ":" + BinarySearchTest.largeKeyList.size() + ":" + missing);
     }
 
 }
