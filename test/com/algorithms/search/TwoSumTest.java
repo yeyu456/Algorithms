@@ -17,7 +17,7 @@ public class TwoSumTest {
     public static int[] NUM;
 
     @BeforeClass
-    public static void setUp() throws Exception {
+    public static void init() throws Exception {
         int SIZE = 10000;
         int MAX = 100000;
         TwoSumTest.NUM = new int[SIZE];

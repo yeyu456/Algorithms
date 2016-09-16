@@ -31,10 +31,10 @@ public class BinarySearchTest {
         List<Integer> dataList = new ArrayList<>();
         List<Integer> largeDataList = new ArrayList<>();
 
-        BufferedReader keyReader = new BufferedReader(new FileReader("./test/com/algorithms/search/tinyT.txt"));
-        BufferedReader dataReader = new BufferedReader(new FileReader("./test/com/algorithms/search/tinyW.txt"));
-        BufferedReader largeKeyReader = new BufferedReader(new FileReader("./test/com/algorithms/search/largeT.txt"));
-        BufferedReader largeDataReader = new BufferedReader(new FileReader("./test/com/algorithms/search/largeW.txt"));
+        BufferedReader keyReader = new BufferedReader(new FileReader("./res/tinyT.txt"));
+        BufferedReader dataReader = new BufferedReader(new FileReader("./res/tinyW.txt"));
+        BufferedReader largeKeyReader = new BufferedReader(new FileReader("./res/largeT.txt"));
+        BufferedReader largeDataReader = new BufferedReader(new FileReader("./res/largeW.txt"));
 
         String line = null;
         while ((line = keyReader.readLine()) != null) {
