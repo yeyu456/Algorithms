@@ -3,8 +3,10 @@ package com.algorithms.search;
 import java.util.HashSet;
 import java.util.Set;
 
+
 /**
- * Created by yuye on 2016/9/15.
+ * exercise
+ * 1.4.15 part1
  */
 public class TwoSum {
 

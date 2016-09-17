@@ -4,8 +4,10 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
 
+
 /**
- * Created by yu on 2016/9/15.
+ * exercise
+ * 1.4.15 part2
  */
 public class ThreeSum {
 

@@ -1,11 +1,10 @@
 package com.algorithms.search;
 
-import edu.princeton.cs.algs4.In;
-
 import java.util.*;
 
 /**
- * Created by yu on 2016/9/8.
+ * exercise
+ * 1.4.14
  */
 public class FourSum {
 

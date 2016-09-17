@@ -1,9 +1,8 @@
 package com.algorithms.search;
 
-import java.util.Arrays;
-
 /**
- * Created by yu on 2016/9/4.
+ * content
+ * 1.1
  */
 public class BinarySearch {
 
@@ -15,7 +14,7 @@ public class BinarySearch {
             int v = key.compareTo(data[midIndex]);
 
             if (v > 0) {
-                lowIndex = midIndex + 1; // +1 和 -1 排除掉已经对比的中值数，减少一次对比
+                lowIndex = midIndex + 1; // +1 and -1 exclude the compared middle num，decrease compare time
             } else if (v < 0) {
                 highIndex = midIndex - 1;
 

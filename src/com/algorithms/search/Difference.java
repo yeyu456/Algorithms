@@ -1,10 +1,11 @@
 package com.algorithms.search;
 
 import java.util.Arrays;
-import java.util.jar.Pack200;
 
 /**
- * Created by yuye on 2016/9/16.
+ * exercise
+ * 1.4.16
+ * 1.4.17
  */
 public class Difference {
 
@@ -45,12 +46,6 @@ public class Difference {
             }
         }
         return new double[]{r1, r2};
-    }
-
-    public static double[] getMinDiffNumR3(double[] data) {
-        if (data.length < 2) {
-            throw new IllegalArgumentException("invalid data.");
-        }
     }
 
     public static double[] getMaxDiffNumR1(double[] data) {
