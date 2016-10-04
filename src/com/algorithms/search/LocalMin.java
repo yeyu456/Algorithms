@@ -33,17 +33,17 @@ public class LocalMin {
         }
         int start = 0;
         int end = data.length;
-        int mid = start + (end - start) / 2;
-        while (mid != 0 || mid != (data.length - 1)) {
+        int mid = (start + end) / 2;
+        while (mid > 0 && mid < (data.length - 1)) {
             if (data[mid] < data[mid - 1] && data[mid] < data[mid + 1]) {
                 return mid;
             }
-            if (data[mid - 1] <= data[mid + 1]) {
+            if (data[mid - 1] < data[mid]) {
                 end = mid - 1;
             } else {
                 start = mid + 1;
             }
-            mid = start + (end - start) / 2;
+            mid = (start + end) / 2;
         }
         return -1;
     }
@@ -58,9 +58,9 @@ public class LocalMin {
         for (int i = 1; i < data.length - 1; i++) {
             for (int j = 1; j < data[i].length - 1; j++) {
                 if (data[i][j] < data[i - 1][j] &&
-                        data[i][j] < data[i+1][j] &&
-                        data[i][j] < data[i][j-1] &&
-                        data[i][j] < data[i][j+1]) {
+                        data[i][j] < data[i + 1][j] &&
+                        data[i][j] < data[i][j - 1] &&
+                        data[i][j] < data[i][j + 1]) {
                     return new int[]{i, j};
                 }
             }
@@ -76,7 +76,35 @@ public class LocalMin {
         if (data.length < 3 || data[0].length < 3) {
             throw new IllegalArgumentException("invalid data.");
         }
-        
+        int len = data.length;
+        int[] start = new int[]{0, 0};
+        int[] end = new int[]{len - 1, len - 1};
+        int[] mid = new int[]{(start[0] + end[0]) / 2, (start[1] + end[1]) / 2};
+        while (mid[0] > 0 && mid[0] < (len - 1) && mid[1] > 0 && mid[1] < (len - 1)) {
+
+            if (data[mid[0]][mid[1]] < data[mid[0] + 1][mid[1]] &&
+                    data[mid[0]][mid[1]] < data[mid[0]][mid[1] + 1] &&
+                    data[mid[0]][mid[1]] < data[mid[0]][mid[1] - 1] &&
+                    data[mid[0]][mid[1]] < data[mid[0] - 1][mid[1]]) {
+                return mid;
+
+            } else if (data[mid[0]][mid[1]] > data[mid[0] - 1][mid[1] - 1]) {
+                end[0] = mid[0] -1;
+                end[1] = mid[1] -1;
+
+            } else if (data[mid[0]][mid[1]] > data[mid[0] - 1][mid[1] + 1]) {
+                start[1] = mid[1];
+                end[0] = mid[0];
+
+            } else if (data[mid[0]][mid[1]] > data[mid[0] + 1][mid[1] - 1]) {
+                start[0] = mid[0];
+                end[1] = mid[1];
+            } else {
+                start[0] = mid[0] + 1;
+                start[1] = mid[1] + 1;
+            }
+            mid = new int[]{(start[0] + end[0]) / 2, (start[1] + end[1]) / 2};
+        }
         return null;
     }
 }
