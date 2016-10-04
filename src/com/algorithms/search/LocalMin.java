@@ -76,34 +76,33 @@ public class LocalMin {
         if (data.length < 3 || data[0].length < 3) {
             throw new IllegalArgumentException("invalid data.");
         }
-        int len = data.length;
-        int[] start = new int[]{0, 0};
-        int[] end = new int[]{len - 1, len - 1};
-        int[] mid = new int[]{(start[0] + end[0]) / 2, (start[1] + end[1]) / 2};
-        while (mid[0] > 0 && mid[0] < (len - 1) && mid[1] > 0 && mid[1] < (len - 1)) {
-
-            if (data[mid[0]][mid[1]] < data[mid[0] + 1][mid[1]] &&
-                    data[mid[0]][mid[1]] < data[mid[0]][mid[1] + 1] &&
-                    data[mid[0]][mid[1]] < data[mid[0]][mid[1] - 1] &&
-                    data[mid[0]][mid[1]] < data[mid[0] - 1][mid[1]]) {
-                return mid;
-
-            } else if (data[mid[0]][mid[1]] > data[mid[0] - 1][mid[1] - 1]) {
-                end[0] = mid[0] -1;
-                end[1] = mid[1] -1;
-
-            } else if (data[mid[0]][mid[1]] > data[mid[0] - 1][mid[1] + 1]) {
-                start[1] = mid[1];
-                end[0] = mid[0];
-
-            } else if (data[mid[0]][mid[1]] > data[mid[0] + 1][mid[1] - 1]) {
-                start[0] = mid[0];
-                end[1] = mid[1];
-            } else {
-                start[0] = mid[0] + 1;
-                start[1] = mid[1] + 1;
+        int start = 0;
+        int end = data.length - 1;
+        int mid = (start + end) / 2;
+        while (mid > start && mid < end) {
+            int min = Integer.MAX_VALUE;
+            int index = -1;
+            for(int i=0;i<data[mid].length;i++) {
+                if (data[mid][i] < min) {
+                    min = data[mid][i];
+                    index = i;
+                }
             }
-            mid = new int[]{(start[0] + end[0]) / 2, (start[1] + end[1]) / 2};
+            if (index != -1) {
+                if (data[mid][index] < data[mid-1][index] &&
+                        data[mid][index] < data[mid+1][index]) {
+                    return new int[]{mid, index};
+
+                } else if (data[mid][index] > data[mid-1][index]) {
+                    end = mid - 1;
+
+                } else {
+                    start = mid + 1;
+                }
+            } else {
+                end = mid - 1;
+            }
+            mid = (start + end) / 2;
         }
         return null;
     }

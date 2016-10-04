@@ -21,8 +21,8 @@ public class LocalMinTest {
 
     @BeforeClass
     public static void init() {
-        int SIZE = 10;
-        int MAX = 100;
+        int SIZE = 1000;
+        int MAX = 100000000;
         LocalMinTest.NUM = new int[SIZE];
         Set<Integer> set = new HashSet<>();
         for (int i = 0; i < SIZE; i++) {
@@ -34,7 +34,7 @@ public class LocalMinTest {
             LocalMinTest.NUM[i] = n;
             //System.out.print("," + LocalMinTest.NUM[i] + " ");
         }
-        //System.out.println(" ");
+        System.out.println(" ");
 
         LocalMinTest.MATRIX_NUM = new int[SIZE][SIZE];
         set = new HashSet<>();
@@ -50,7 +50,7 @@ public class LocalMinTest {
         }
     }
 
-    //@Test
+    @Test
     public void getArrayLocalMinR1() throws Exception {
         int index = LocalMin.getArrayLocalMinR1(Arrays.copyOf(LocalMinTest.NUM, LocalMinTest.NUM.length));
         if (index != -1) {
@@ -61,7 +61,7 @@ public class LocalMinTest {
         }
     }
 
-    //@Test
+    @Test
     public void getArrayLocalMinR2() throws Exception {
         int index = LocalMin.getArrayLocalMinR2(Arrays.copyOf(LocalMinTest.NUM, LocalMinTest.NUM.length));
         if (index != -1) {
@@ -74,30 +74,33 @@ public class LocalMinTest {
 
     @Test
     public void getMatrixLocalMinR1() throws Exception {
-
+        int[] index = LocalMin.getMatrixLocalMinR1(LocalMinTest.MATRIX_NUM);
+        if (index != null) {
+            System.out.println("matrix r1 (" + index[0] + ',' + index[1] + ") value:" + LocalMinTest.MATRIX_NUM[index[0]][index[1]]);
+        } else {
+            System.out.println("matrix r1 failed");
+        }
     }
 
     @Test
     public void getMatrixLocalMinR2() throws Exception {
-        for (int i=0;i<10;i++) {
-            int[] index = LocalMin.getMatrixLocalMinR2(LocalMinTest.MATRIX_NUM);
-            if (index == null) {
-                //System.out.println("r2 (" + index[0] + ',' + index[1] + ") value:" + LocalMinTest.MATRIX_NUM[index[0]][index[1]]);
-                //System.out.println("upper (" + (index[0]-1) + ',' + index[1] + ") value:" + LocalMinTest.MATRIX_NUM[index[0]-1][index[1]]);
-                //System.out.println("downer (" + (index[0]+1) + ',' + index[1] + ") value:" + LocalMinTest.MATRIX_NUM[index[0]+1][index[1]]);
-                //System.out.println("left (" + (index[0]) + ',' + (index[1] - 1) + ") value:" + LocalMinTest.MATRIX_NUM[index[0]][index[1]-1]);
-                //System.out.println("right (" + (index[0]) + ',' + (index[1] + 1) + ") value:" + LocalMinTest.MATRIX_NUM[index[0]][index[1]+1]);
-            //} else {
-                System.out.println("matrix r2 failed " + i);
-                for (int k=0;k<LocalMinTest.MATRIX_NUM.length;k++) {
-                    for(int j=0;j<LocalMinTest.MATRIX_NUM[k].length;j++) {
-                        System.out.print(LocalMinTest.MATRIX_NUM[k][j] + " ");
-                    }
-                    System.out.println("");
-                }
-                break;
-            }
+        int[] index = LocalMin.getMatrixLocalMinR2(LocalMinTest.MATRIX_NUM);
+        if (index != null) {
+            System.out.println("matrix r2 (" + index[0] + ',' + index[1] + ") value:" + LocalMinTest.MATRIX_NUM[index[0]][index[1]]);
+            System.out.println("upper (" + (index[0]-1) + ',' + index[1] + ") value:" + LocalMinTest.MATRIX_NUM[index[0]-1][index[1]]);
+            System.out.println("downer (" + (index[0]+1) + ',' + index[1] + ") value:" + LocalMinTest.MATRIX_NUM[index[0]+1][index[1]]);
+            System.out.println("left (" + (index[0]) + ',' + (index[1] - 1) + ") value:" + LocalMinTest.MATRIX_NUM[index[0]][index[1]-1]);
+            System.out.println("right (" + (index[0]) + ',' + (index[1] + 1) + ") value:" + LocalMinTest.MATRIX_NUM[index[0]][index[1]+1]);
+        } else {
+            System.out.println("matrix r2 failed");
         }
+        /*for (int k = 0; k < LocalMinTest.MATRIX_NUM.length; k++) {
+            for (int j = 0; j < LocalMinTest.MATRIX_NUM[k].length; j++) {
+                System.out.print(LocalMinTest.MATRIX_NUM[k][j] + " ");
+            }
+            System.out.println("");
+        }
+        System.out.println("");*/
     }
 
 }
