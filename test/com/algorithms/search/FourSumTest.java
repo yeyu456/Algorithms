@@ -1,5 +1,6 @@
 package com.algorithms.search;
 
+import com.algorithms.search.nsum.FourSum;
 import edu.princeton.cs.algs4.StdRandom;
 import org.junit.BeforeClass;
 import org.junit.FixMethodOrder;
@@ -7,8 +8,6 @@ import org.junit.Test;
 import org.junit.runners.MethodSorters;
 
 import java.util.Arrays;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by yuye on 2016/9/15.

@@ -1,4 +1,4 @@
-package com.algorithms.search;
+package com.algorithms.search.nsum;
 
 import java.util.Arrays;
 import java.util.HashSet;

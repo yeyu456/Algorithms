@@ -1,13 +1,11 @@
 package com.algorithms.search;
 
+import com.algorithms.search.nsum.TwoSum;
 import edu.princeton.cs.algs4.StdRandom;
-import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
 import java.util.Arrays;
-
-import static org.junit.Assert.*;
 
 /**
  * Created by yu on 2016/9/15.
