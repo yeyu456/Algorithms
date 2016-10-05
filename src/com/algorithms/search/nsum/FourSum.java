@@ -3,8 +3,8 @@ package com.algorithms.search.nsum;
 import java.util.*;
 
 /**
- * exercise
- * 1.4.14
+ * Algorithms 4th exercise 1.4.14 4-Sum Count Of Unique Element Set In Sorted Array
+ * 算法第4版 习题 1.4.14 统计排序好的数组中，4个元素之和为0的非重复整数集的数量
  */
 public class FourSum {
 

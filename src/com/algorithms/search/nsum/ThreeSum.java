@@ -6,8 +6,8 @@ import java.util.Set;
 
 
 /**
- * exercise
- * 1.4.15 part2
+ * Algorithms 4th exercise 1.4.15-part2  3-Sum Count Of Unique Element Set In Sorted Array
+ * 算法第4版 习题 1.4.15第二部分 统计排序好的数组中，3个元素之和为0的非重复整数集的数量
  */
 public class ThreeSum {
 
