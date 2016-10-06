@@ -9,17 +9,17 @@ Algorithms 4th edition practices
     - Fibonacci Search [exercise 1.4.22](src/com/algorithms/search/binary/FibonacciSearch.java);
     - Fraction Binary Search [exercise 1.4.23](src/com/algorithms/search/binary/FractionBinarySearch.java);
 - Bitonic Search
-    - Bitonic Search [exercise 1.4.20](src/com/algorithms/search/binary/BitonicSearch.java);
+    - Bitonic Search [exercise 1.4.20](src/com/algorithms/search/bitonic/BitonicSearch.java);
 - Distance Search
-    - Closest Search [exercise 1.4.16](src/com/algorithms/search/binary/ClosestSearch.java);
-    - Farthest Search [exercise 1.4.17](src/com/algorithms/search/binary/FarthestSearch.java);
+    - Closest Search [exercise 1.4.16](src/com/algorithms/search/distance/ClosestSearch.java);
+    - Farthest Search [exercise 1.4.17](src/com/algorithms/search/distance/FarthestSearch.java);
 - Local Search
-    - Array Local Minimum Search [exercise 1.4.18](src/com/algorithms/search/binary/ArrayLocalMinSearch.java);
-    - Matrix Local Minimum Search [exercise 1.4.19](src/com/algorithms/search/binary/MatrixLocalMinSearch.java);
+    - Array Local Minimum Search [exercise 1.4.18](src/com/algorithms/search/local/ArrayLocalMinSearch.java);
+    - Matrix Local Minimum Search [exercise 1.4.19](src/com/algorithms/search/local/MatrixLocalMinSearch.java);
 - N-Sum Search
-    - 4-sum [exercise 1.4.14](src/com/algorithms/search/binary/FourSum.java);
-    - 2-sum [exercise 1.4.15-part1](src/com/algorithms/search/binary/TwoSum.java);
-    - 3-sum [exercise 1.4.15-part2](src/com/algorithms/search/binary/ThreeSum.java);
-    
+    - 4-sum [exercise 1.4.14](src/com/algorithms/search/nsum/FourSum.java);
+    - 2-sum [exercise 1.4.15-part1](src/com/algorithms/search/nsum/TwoSum.java);
+    - 3-sum [exercise 1.4.15-part2](src/com/algorithms/search/nsum/ThreeSum.java);
+
 ## Todo
 
