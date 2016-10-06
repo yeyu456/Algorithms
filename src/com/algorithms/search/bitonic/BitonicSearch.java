@@ -9,16 +9,16 @@ public class BitonicSearch {
     /**
      * 暴力搜索实现
      * @param data 数据集
-     * @param key 查找数值
+     * @param num 查找数值
      * @return (-1:查找数值不存在于数据集;其他:数值所在数据集的下标序号)
      */
-    public static int bruteForceSearch(int[] data, int key) {
+    public static int bruteForceSearch(int[] data, int num) {
         if (data == null || data.length == 0) {
             throw new IllegalArgumentException("Invalid data array.");
         }
 
         for (int i=0;i<data.length;i++) {
-            if (data[i] == key) {
+            if (data[i] == num) {
                 return i;
             }
         }
@@ -28,10 +28,10 @@ public class BitonicSearch {
     /**
      * 二分搜索实现
      * @param data 数据集
-     * @param key 查找数值
+     * @param num 查找数值
      * @return (-1:查找数值不存在于数据集;其他:数值所在数据集的下标序号)
      */
-    public static int binarySearch(int[] data, int key) {
+    public static int binarySearch(int[] data, int num) {
         if (data == null || data.length == 0) {
             throw new IllegalArgumentException("Invalid data array.");
         }
@@ -40,16 +40,16 @@ public class BitonicSearch {
         if (maxIndex == -1) {
             throw new IllegalArgumentException("Invalid bitonic data array.");
 
-        } else if (key > data[maxIndex]) {
+        } else if (num > data[maxIndex]) {
             return -1;
 
-        } else if (key == data[maxIndex]) {
+        } else if (num == data[maxIndex]) {
             return  maxIndex;
 
         } else {
-            int index = searchIncrementPart(data, maxIndex, key);
+            int index = searchIncrementPart(data, maxIndex, num);
             if (index == -1) {
-                index = searchDecrementPart(data, maxIndex, key);
+                index = searchDecrementPart(data, maxIndex, num);
             }
             return index;
         }
@@ -81,18 +81,18 @@ public class BitonicSearch {
      * 在双调数组递增部分查找
      * @param data 数据集
      * @param maxIndex 双调数组中的最大数值的下标序号
-     * @param key 查找数值
+     * @param num 查找数值
      * @return (-1:查找数值不存在于数据集;其他:数值所在数据集的下标序号)
      */
-    private static int searchIncrementPart(int[] data, int maxIndex, int key) {
+    private static int searchIncrementPart(int[] data, int maxIndex, int num) {
         int start = 0;
         int end = maxIndex - 1;
         while (start <= end) {
             int mid = (start + end) / 2;
-            if (data[mid] == key) {
+            if (data[mid] == num) {
                 return mid;
 
-            } else if (data[mid] > key) {
+            } else if (data[mid] > num) {
                 end = mid - 1;
 
             } else {
@@ -106,18 +106,18 @@ public class BitonicSearch {
      * 在双调数组递减部分查找
      * @param data 数据集
      * @param maxIndex 双调数组中的最大数值的下标序号
-     * @param key 查找数值
+     * @param num 查找数值
      * @return (-1:查找数值不存在于数据集;其他:数值所在数据集的下标序号)
      */
-    private static int searchDecrementPart(int[] data, int maxIndex, int key) {
+    private static int searchDecrementPart(int[] data, int maxIndex, int num) {
         int start = maxIndex + 1;
         int end = data.length - 1;
         while (start <= end) {
             int mid = (start + end) / 2;
-            if (data[mid] == key) {
+            if (data[mid] == num) {
                 return mid;
 
-            } else if (data[mid] < key) {
+            } else if (data[mid] < num) {
                 end = mid - 1;
 
             } else {
