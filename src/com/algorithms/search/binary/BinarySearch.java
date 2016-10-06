@@ -1,8 +1,8 @@
 package com.algorithms.search.binary;
 
 /**
- * Algorithms 4th chapter 1.1 Binary Search Generic Implement
- * 算法第4版 章节 1.1 二分搜索算法泛型实现
+ * Algorithms 4th chapter 1.1 Binary Search Generic Implement In Sorted Array
+ * 算法第4版 章节 1.1 排序好的数组中，二分搜索算法泛型实现
  */
 public class BinarySearch {
 

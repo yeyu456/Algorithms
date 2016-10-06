@@ -49,7 +49,7 @@ public class ClosestSearch {
             return data;
         }
 
-        Arrays.sort(data);
+        Arrays.sort(data); //TODO repleace self method implement
         double v1 = data[0];
         double v2 = data[1];
         double diff = Math.abs(v1 - v2);
