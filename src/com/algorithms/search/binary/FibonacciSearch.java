@@ -13,7 +13,22 @@ public class FibonacciSearch {
      * @return (-1:查找数值不存在于数据集;其他:数值所在数据集的下标序号)
      */
     public static int search(int[] data, int num) {
+        int k1 = 1;
+        int k2 = 2;
+        while(k2 < data.length) {
+            int k0 = k2 - k1;
+            if (data[k0] == num) {
+                return k1;
 
+            }  else if (data[k0] > num) {
+                int tmp = k2;
+                k2 = k1 + k2;
+                k1 = tmp;
+
+            } else {
+                
+            }
+        }
         return -1;
     }
 }
