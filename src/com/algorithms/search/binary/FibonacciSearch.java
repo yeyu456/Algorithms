@@ -14,19 +14,26 @@ public class FibonacciSearch {
      */
     public static int search(int[] data, int num) {
         int k1 = 1;
-        int k2 = 2;
-        while(k2 < data.length) {
+        int k2 = 1;
+        while (k1 + k2 < data.length) {
+            int tmp = k2;
+            k2 = k1 + k2;
+            k1 = tmp;
+        }
+        int i = -1;
+        while(k1 > 0 && k2 < data.length) {
             int k0 = k2 - k1;
-            if (data[k0] == num) {
-                return k1;
+            if (data[i + k0] == num) {
+                return i + k0;
 
-            }  else if (data[k0] > num) {
-                int tmp = k2;
-                k2 = k1 + k2;
-                k1 = tmp;
+            }  else if (data[i + k0] > num) {
+                k2 = k0;
+                k1 -= k0;
 
             } else {
-                
+                k2 = k1;
+                k1 = k0;
+                i += k0;
             }
         }
         return -1;
