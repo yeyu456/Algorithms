@@ -21,6 +21,7 @@ A List Of Algorithms Implement
 
 ### Random
 - [Middle Square](src/com/algorithms/random/MiddleSquare.java);
+- [Linear Congruential Generator](src/com/algorithms/random/LCG.java);
     
 ## Todo
 
