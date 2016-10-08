@@ -42,11 +42,11 @@ public class FibonacciSearchTest {
     @Test(timeout = 1000)
     public void search() throws Exception {
         for(int i=0;i<this.num.length;i++) {
-            Assert.assertEquals(i, FibonacciSearch.search(this.num, this.num[i], false));
+            Assert.assertEquals(i, FibonacciSearch.search(this.num, this.num[i]));
             int other = this.num[i]+1;
             if (i+1 != this.num.length) {
                 while (other < this.num[i+1]) {
-                    Assert.assertEquals(-1, FibonacciSearch.search(this.num, other, true));
+                    Assert.assertEquals(-1, FibonacciSearch.search(this.num, other));
                     other++;
                 }
             }
