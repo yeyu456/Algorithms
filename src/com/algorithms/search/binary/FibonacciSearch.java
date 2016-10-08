@@ -12,21 +12,26 @@ public class FibonacciSearch {
      * @param num 查找数值
      * @return (-1:查找数值不存在于数据集;其他:数值所在数据集的下标序号)
      */
-    public static int search(int[] data, int num) {
+    public static int search(int[] data, int num, boolean isFalse) {
         int k1 = 1;
         int k2 = 1;
-        while (k1 + k2 < data.length) {
+        while (k2 < data.length) {
             int tmp = k2;
             k2 = k1 + k2;
             k1 = tmp;
         }
         int i = -1;
-        while(k1 > 0 && k2 < data.length) {
+        while(k2 > 1) {
             int k0 = k2 - k1;
-            if (data[i + k0] == num) {
-                return i + k0;
+            int index = i + k0;
+            if (index > data.length - 1) {
+                index = data.length - 1;
+            }
+            //System.out.println(index);
+            if (data[index] == num) {
+                return index;
 
-            }  else if (data[i + k0] > num) {
+            }  else if (data[index] > num) {
                 k2 = k0;
                 k1 -= k0;
 
@@ -35,6 +40,9 @@ public class FibonacciSearch {
                 k1 = k0;
                 i += k0;
             }
+        }
+        if (data[i+1] == num) {
+            return i+1;
         }
         return -1;
     }

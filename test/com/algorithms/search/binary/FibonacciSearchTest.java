@@ -1,21 +1,55 @@
 package com.algorithms.search.binary;
 
+import com.algorithms.search.bitonic.BitonicSearchTestSuite;
+import edu.princeton.cs.algs4.StdRandom;
 import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
+
+import java.util.HashSet;
+import java.util.Set;
 
 import static org.junit.Assert.*;
 
 /**
- * Created by yu on 2016/10/8.
+ * Fibonacci Search Test
  */
 public class FibonacciSearchTest {
 
-    @Test
+    public int[] num;
+
+    @Before
+    public void init() {
+        int SIZE = 100000;
+        int MAX = 1000000;
+        this.num = new int[SIZE];
+        Set<Integer> set = new HashSet<>();
+        for (int i = 0; i < SIZE; i++) {
+            int n;
+            int min = -MAX;
+            if (i != 0) {
+                min = this.num[i - 1];
+            }
+            int max = MAX / SIZE * (i + 1);
+            do {
+                n = StdRandom.uniform(min, max);
+            } while (set.contains(n) || (i != 0 && n <= min));
+            set.add(n);
+            this.num[i] = n;
+        }
+    }
+
+    @Test(timeout = 1000)
     public void search() throws Exception {
-        int[] data = new int[]{1, 3, 5, 7, 9, 11, 13, 15};
-        for(int i=0;i<data.length;i++) {
-            Assert.assertEquals(i, FibonacciSearch.search(data, data[i]));
-            Assert.assertEquals(-1, FibonacciSearch.search(data, data[i] + 1));
+        for(int i=0;i<this.num.length;i++) {
+            Assert.assertEquals(i, FibonacciSearch.search(this.num, this.num[i], false));
+            int other = this.num[i]+1;
+            if (i+1 != this.num.length) {
+                while (other < this.num[i+1]) {
+                    Assert.assertEquals(-1, FibonacciSearch.search(this.num, other, true));
+                    other++;
+                }
+            }
         }
     }
 
