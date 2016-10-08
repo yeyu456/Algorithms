@@ -5,4 +5,8 @@ package com.algorithms.search.binary;
  * 算法第4版 习题 1.4.23 排序好的数组中，使用二分搜索实现查找分数
  */
 public class FractionBinarySearch {
+
+    public static void search(int[] data) {
+
+    }
 }
