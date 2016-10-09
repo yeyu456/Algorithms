@@ -6,13 +6,13 @@ package com.algorithms.random;
  */
 public class MiddleSquare {
 
-    private int seed;
+    private long seed;
 
     /**
      * 设置随机种子
      * @param seed 随机种子
      */
-    public void setSeed(int seed) {
+    public void setSeed(long seed) {
         this.seed = seed;
     }
 
@@ -20,12 +20,12 @@ public class MiddleSquare {
      * 生成随机数
      * @return 随机数
      */
-    public int random() {
-        int square = this.seed * this.seed;
+    public long random() {
+        long square = this.seed * this.seed;
         int m = String.valueOf(this.seed).length();
         String numStr = String.format("%0" + (m * 2) + "d", square);
         numStr = numStr.substring(m / 2, m / 2 + m);
-        this.seed = Integer.parseInt(numStr);
+        this.seed = Long.parseLong(numStr);
         return this.seed;
     }
 }
