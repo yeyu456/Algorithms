@@ -25,4 +25,8 @@ A List Of Algorithms Implement
 - [Mersenne Twister](src/com/algorithms/random/MersenneTwister.java)
 
 ## Todo
+- Mersenne Twister
+- Linear Feedback Shift Register
+    - Fabonacci LFSR
+    - Galois LFSR
 
