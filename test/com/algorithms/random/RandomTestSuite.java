@@ -11,7 +11,7 @@ import static org.junit.Assert.*;
  * 随机数测试套件
  */
 @RunWith(Suite.class)
-@Suite.SuiteClasses({MiddleSquare.class})
+@Suite.SuiteClasses({MiddleSquare.class, LCGTest.class})
 public class RandomTestSuite {
 
 }
