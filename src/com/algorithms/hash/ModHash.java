@@ -1,7 +1,7 @@
 package com.algorithms.hash;
 
 /**
- * Algorithms 4th chapter 3.4.1.2 Division Method Hash Implement
+ * Algorithms 4th Section 3.4.1.2 Division Method Hash Implement
  * 算法第4版 章节 3.4.1.2 除留余数法的哈希实现
  */
 public class ModHash {

@@ -1,7 +1,7 @@
 package com.algorithms.sort;
 
 /**
- * Algorithms 4th chapter 2.1.2 Selection Sort
+ * Algorithms 4th Section 2.1.2 Selection Sort
  * 算法第4版 章节 2.1.2 选择排序
  */
 public class SelectionSort {
