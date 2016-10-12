@@ -1,32 +1,22 @@
 # Algorithms
 ## Intro
-A List Of Algorithms Implement
+Algorithms 4th Chapters&Exercises Implement
 
 ## Indexes
 ### Search
-- Binary Search
-    - [Normal Binary Search](src/com/algorithms/search/binary/BinarySearch.java)
-    - [Fibonacci Search](src/com/algorithms/search/binary/FibonacciSearch.java)
-    - [Fraction Binary Search](src/com/algorithms/search/binary/FractionBinarySearch.java)
-    - [Bitonic Search](src/com/algorithms/search/bitonic/BitonicSearch.java)
-    - [Array Local Minimum Search](src/com/algorithms/search/local/ArrayLocalMinSearch.java)
-    - [Matrix Local Minimum Search](src/com/algorithms/search/local/MatrixLocalMinSearch.java)
-- Distance Search
-    - [Closest Search](src/com/algorithms/search/distance/ClosestSearch.java)
-    - [Farthest Search](src/com/algorithms/search/distance/FarthestSearch.java)
-- Hash Search
-    - [2-Sum](src/com/algorithms/search/nsum/TwoSum.java)
-    - [3-Sum](src/com/algorithms/search/nsum/ThreeSum.java)
-    - [4-Sum](src/com/algorithms/search/nsum/FourSum.java)
-
-### Random
-- [Middle Square](src/com/algorithms/random/MiddleSquare.java)
-- [Linear Congruential Generator](src/com/algorithms/random/LCG.java)
-- [Mersenne Twister](src/com/algorithms/random/MersenneTwister.java)
-
-## Todo
-- Mersenne Twister
-- Linear Feedback Shift Register
-    - Fabonacci LFSR
-    - Galois LFSR
+- Chapter 1
+    - Chapter 1.1 [Binary Search](src/com/algorithms/search/binary/BinarySearch.java)
+    - Exercise 1.4.14 [4-Sum](src/com/algorithms/search/nsum/FourSum.java)
+    - Exercise 1.4.15-part1 [2-Sum](src/com/algorithms/search/nsum/TwoSum.java)
+    - Exercise 1.4.15-part2 [3-Sum](src/com/algorithms/search/nsum/ThreeSum.java)
+    - Exercise 1.4.16 [Closest Search](src/com/algorithms/search/distance/ClosestSearch.java)
+    - Exercise 1.4.17 [Farthest Search](src/com/algorithms/search/distance/FarthestSearch.java)
+    - Exercise 1.4.18 [Array Local Minimum Search](src/com/algorithms/search/local/ArrayLocalMinSearch.java)
+    - Exercise 1.4.19 [Matrix Local Minimum Search](src/com/algorithms/search/local/MatrixLocalMinSearch.java)
+    - Exercise 1.4.20 [Bitonic Search](src/com/algorithms/search/bitonic/BitonicSearch.java)
+    - Exercise 1.4.22 [Fibonacci Search](src/com/algorithms/search/binary/FibonacciSearch.java)
+    - Exercise 1.4.23 [Fraction Binary Search](src/com/algorithms/search/binary/FractionBinarySearch.java)
+    
+- Chapter 3
+    - Chapter 3.4.1.2 [Mod Hash](src/com/algorithms/hash/ModHash.java)
 

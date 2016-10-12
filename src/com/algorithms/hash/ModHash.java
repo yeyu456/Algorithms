@@ -1,4 +1,4 @@
-package com.algorithms.search.hash;
+package com.algorithms.hash;
 
 /**
  * Algorithms 4th chapter 3.4.1.2 Division Method Hash Implement
