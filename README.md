@@ -1,6 +1,11 @@
-# Algorithms
+# Algorithms Exercises
 ## Intro
-Algorithms 4th Chapters&Exercises Implement
+Source of exercises:
+- [Algorithms, 4th Edition](http://algs4.cs.princeton.edu/home/)
+- [LeetCode](https://leetcode.com/)
+- [SPOJ](http://www.spoj.com/)
+- [Topcoder](https://www.topcoder.com/) 
+- [LintCode](http://www.lintcode.com/en/)
 
 ## Indexes
 ### Search
