@@ -1,8 +1,8 @@
 package com.algorithms.search.binary;
 
 /**
- * Algorithms 4th Section 1.1 Binary Search Generic Implement In Sorted Array
- * 算法第4版 章节 1.1 排序好的数组中，二分搜索算法泛型实现
+ * Binary Search Generic Implement In Sorted Array
+ * 排序好的数组中，二分搜索算法泛型实现
  */
 public class BinarySearch {
 
@@ -16,23 +16,25 @@ public class BinarySearch {
     public static <T extends Comparable> int search(T[] data, T num) {
         if (data == null || data.length == 0) {
             throw new IllegalArgumentException("Invalid data array.");
+
         } else if (num == null) {
             throw new IllegalArgumentException("Null search number.");
         }
 
-        int lowIndex = 0;
-        int highIndex = data.length - 1;
-        while(lowIndex <= highIndex) {
-            int midIndex = (lowIndex + highIndex) / 2;
-            int v = num.compareTo(data[midIndex]);
+        int lo = 0;
+        int hi = data.length - 1;
+        while (lo <= hi) {
+            int mid = lo + (hi - lo) / 2;
+            int v = num.compareTo(data[mid]);
 
             if (v > 0) {
-                lowIndex = midIndex + 1; // +1 and -1 exclude the compared middle num，decrease compare time
+                lo = mid + 1;
+
             } else if (v < 0) {
-                highIndex = midIndex - 1;
+                hi = mid - 1;
 
             } else {
-                return midIndex;
+                return mid;
             }
         }
         return -1;
