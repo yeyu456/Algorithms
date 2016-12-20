@@ -9,8 +9,13 @@ Source of exercises:
 
 ## Indexes
 ### Search
+#### [Binary Search](src/com/algorithms/search/binary/BinarySearch.java) 
+- LeetCode
+    - [4 - Median of Two Sorted Arrays](src/com/algorithms/search/binary/MedianOfTwoSortedArrays.java) [[Link](https://leetcode.com/problems/median-of-two-sorted-arrays/)]
+    - [29 - Divide Two Integers](src/com/algorithms/search/binary/DivideTwoIntegers.java) [Link](https://leetcode.com/problems/divide-two-integers/)
+    - [33 - Search in Rotated Sorted Array](src/com/algorithms/search/binary/SearchInRotatedSortedArray.java) [Link](https://leetcode.com/problems/search-in-rotated-sorted-array/)
 - Chapter 1
-    - Section 1.1 [Binary Search](src/com/algorithms/search/binary/BinarySearch.java)
+    - Section 1.1 
     - Exercise 1.4.14 [4-Sum](src/com/algorithms/search/nsum/FourSum.java)
     - Exercise 1.4.15-part1 [2-Sum](src/com/algorithms/search/nsum/TwoSum.java)
     - Exercise 1.4.15-part2 [3-Sum](src/com/algorithms/search/nsum/ThreeSum.java)
