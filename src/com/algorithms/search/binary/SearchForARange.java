@@ -41,6 +41,8 @@ public class SearchForARange {
                     targetEnd = mid;
                     end = mid - 1;
 
+                    // while the both sides of mid are equal target,
+                    // find the leftmost side index of target first
                 } else {
                     targetEnd = mid + 1;
                     end = mid - 1;

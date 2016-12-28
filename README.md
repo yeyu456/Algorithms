@@ -14,7 +14,11 @@ Source of exercises:
     - [4 - Median of Two Sorted Arrays](src/com/algorithms/search/binary/MedianOfTwoSortedArrays.java) [[Link](https://leetcode.com/problems/median-of-two-sorted-arrays/)]
     - [29 - Divide Two Integers](src/com/algorithms/search/binary/DivideTwoIntegers.java) [Link](https://leetcode.com/problems/divide-two-integers/)
     - [33 - Search in Rotated Sorted Array](src/com/algorithms/search/binary/SearchInRotatedSortedArray.java) [Link](https://leetcode.com/problems/search-in-rotated-sorted-array/)
-    - [34 - Search for a Range](src/com/algorithms/search/binary/SearchForARange) [Link](https://leetcode.com/problems/search-for-a-range/)
+    - [34 - Search for a Range](src/com/algorithms/search/binary/SearchForARange.java) [Link](https://leetcode.com/problems/search-for-a-range/)
+    - [35 - Search Insert Position](src/com/algorithms/search/binary/SearchInsertPosition.java) [Link](https://leetcode.com/problems/search-insert-position/)
+    - [50 - Pow(x, n)](src/com/algorithms/search/binary/Pow.java) [Link](https://leetcode.com/problems/powx-n/)
+    - [69 - Sqrt(x)](src/com/algorithms/search/binary/Sqrt.java) [Link](https://leetcode.com/problems/sqrtx/)
+    - [74 - Search a 2D Matrix](src/com/algorithms/search/binary/Search2DMatrix.java) [Link](https://leetcode.com/problems/search-a-2d-matrix/)
 - Chapter 1
     - Section 1.1 
     - Exercise 1.4.14 [4-Sum](src/com/algorithms/search/nsum/FourSum.java)
