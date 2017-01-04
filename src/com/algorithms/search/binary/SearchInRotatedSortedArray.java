@@ -11,10 +11,13 @@ package com.algorithms.search.binary;
 public class SearchInRotatedSortedArray {
 
     public static int search(int[] nums, int target) {
+        if (nums == null) {
+            return -1;
+        }
         int start = 0;
         int end = nums.length - 1;
         while (start <= end) {
-            int mid = (start + end) / 2;
+            int mid =  start + (end - start) / 2;
             if (nums[mid] == target) {
                 return mid;
             }

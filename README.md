@@ -12,13 +12,29 @@ Source of exercises:
 #### [Binary Search](src/com/algorithms/search/binary/BinarySearch.java) 
 - LeetCode
     - [4 - Median of Two Sorted Arrays](src/com/algorithms/search/binary/MedianOfTwoSortedArrays.java) [[Link](https://leetcode.com/problems/median-of-two-sorted-arrays/)]
-    - [29 - Divide Two Integers](src/com/algorithms/search/binary/DivideTwoIntegers.java) [Link](https://leetcode.com/problems/divide-two-integers/)
-    - [33 - Search in Rotated Sorted Array](src/com/algorithms/search/binary/SearchInRotatedSortedArray.java) [Link](https://leetcode.com/problems/search-in-rotated-sorted-array/)
-    - [34 - Search for a Range](src/com/algorithms/search/binary/SearchForARange.java) [Link](https://leetcode.com/problems/search-for-a-range/)
-    - [35 - Search Insert Position](src/com/algorithms/search/binary/SearchInsertPosition.java) [Link](https://leetcode.com/problems/search-insert-position/)
-    - [50 - Pow(x, n)](src/com/algorithms/search/binary/Pow.java) [Link](https://leetcode.com/problems/powx-n/)
-    - [69 - Sqrt(x)](src/com/algorithms/search/binary/Sqrt.java) [Link](https://leetcode.com/problems/sqrtx/)
-    - [74 - Search a 2D Matrix](src/com/algorithms/search/binary/Search2DMatrix.java) [Link](https://leetcode.com/problems/search-a-2d-matrix/)
+    - [29 - Divide Two Integers](src/com/algorithms/search/binary/DivideTwoIntegers.java) [[Link](https://leetcode.com/problems/divide-two-integers/)]
+    - [33 - Search in Rotated Sorted Array](src/com/algorithms/search/binary/SearchInRotatedSortedArray.java) [[Link](https://leetcode.com/problems/search-in-rotated-sorted-array/)]
+    - [34 - Search for a Range](src/com/algorithms/search/binary/SearchForARange.java) [[Link](https://leetcode.com/problems/search-for-a-range/)]
+    - [35 - Search Insert Position](src/com/algorithms/search/binary/SearchInsertPosition.java) [[Link](https://leetcode.com/problems/search-insert-position/)]
+    - [50 - Pow(x, n)](src/com/algorithms/search/binary/Pow.java) [[Link](https://leetcode.com/problems/powx-n/)]
+    - [69 - Sqrt(x)](src/com/algorithms/search/binary/Sqrt.java) [[Link](https://leetcode.com/problems/sqrtx/)]
+    - [74 - Search a 2D Matrix](src/com/algorithms/search/binary/Search2DMatrix.java) [[Link](https://leetcode.com/problems/search-a-2d-matrix/)]
+    - [81 - Search in Rotated Sorted Array II](src/com/algorithms/search/binary/SearchInRotatedSortedArray2.java) [[Link](https://leetcode.com/problems/search-in-rotated-sorted-array-ii/)]
+    - [153 - Find Minimum in Rotated Sorted Array](src/com/algorithms/search/binary/FindMinimumInRotatedSortedArray.java) [[Link](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array/)]
+    - [154 - Find Minimum in Rotated Sorted Array II](src/com/algorithms/search/binary/FindMinimumInRotatedSortedArray2.java) [[Link](https://leetcode.com/problems/find-minimum-in-rotated-sorted-array-ii/)]
+    - [162 - Find Peak Element](src/com/algorithms/search/binary/FindPeakElement.java) [[Link](https://leetcode.com/problems/find-peak-element/)]
+    - [167 - Two Sum II - Input array is sorted](src/com/algorithms/search/binary/TwoSum2.java) [[Link](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)]
+    - [174 - Dungeon Game](src/com/algorithms/search/binary/DungeonGame.java) [[Link](https://leetcode.com/problems/dungeon-game/)] __TODO__
+    
+### Two Pointers
+####
+- LeetCode
+    - [209 - Minimum Size Subarray Sum](src/com/algorithms/search/binary/MinimumSizeSubarraySum.java) [[Link](https://leetcode.com/problems/minimum-size-subarray-sum/)]
+
+### Tree
+####
+- LeetCode
+    - 
 - Chapter 1
     - Section 1.1 
     - Exercise 1.4.14 [4-Sum](src/com/algorithms/search/nsum/FourSum.java)
