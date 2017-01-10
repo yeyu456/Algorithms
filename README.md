@@ -8,8 +8,8 @@ Source of exercises:
 - [LintCode](http://www.lintcode.com/en/)
 
 ## Indexes
-### Search
-#### [Binary Search](src/com/algorithms/search/binary/BinarySearch.java) 
+#### Search
+##### [Binary Search](src/com/algorithms/search/binary/BinarySearch.java) 
 - LeetCode
     - [4 - Median of Two Sorted Arrays](src/com/algorithms/search/binary/MedianOfTwoSortedArrays.java) [[Link](https://leetcode.com/problems/median-of-two-sorted-arrays/)]
     - [29 - Divide Two Integers](src/com/algorithms/search/binary/DivideTwoIntegers.java) [[Link](https://leetcode.com/problems/divide-two-integers/)]
@@ -25,16 +25,16 @@ Source of exercises:
     - [162 - Find Peak Element](src/com/algorithms/search/binary/FindPeakElement.java) [[Link](https://leetcode.com/problems/find-peak-element/)]
     - [167 - Two Sum II - Input array is sorted](src/com/algorithms/search/binary/TwoSum2.java) [[Link](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)]
     - [174 - Dungeon Game](src/com/algorithms/search/binary/DungeonGame.java) [[Link](https://leetcode.com/problems/dungeon-game/)] __TODO__
+    - [278 - First Bad Version](src/com/algorithms/search/binary/FirstBadVersion.java) [[Link](https://leetcode.com/problems/first-bad-version/)]
     
-### Two Pointers
-####
+##### Two Pointers
 - LeetCode
-    - [209 - Minimum Size Subarray Sum](src/com/algorithms/search/binary/MinimumSizeSubarraySum.java) [[Link](https://leetcode.com/problems/minimum-size-subarray-sum/)]
+    - [209 - Minimum Size Subarray Sum](src/com/algorithms/search/twopointer/MinimumSizeSubarraySum.java) [[Link](https://leetcode.com/problems/minimum-size-subarray-sum/)]
 
-### Tree
-####
+#### Tree
 - LeetCode
-    - 
+    - [222 - Count Complete Tree Nodes](src/com/algorithms/tree/CountCompleteTreeNodes.java) [[Link](https://leetcode.com/problems/count-complete-tree-nodes/)]
+
 - Chapter 1
     - Section 1.1 
     - Exercise 1.4.14 [4-Sum](src/com/algorithms/search/nsum/FourSum.java)
