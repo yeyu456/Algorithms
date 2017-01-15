@@ -8,6 +8,11 @@ Source of exercises:
 - [LintCode](http://www.lintcode.com/en/)
 
 ## Indexes
+#### Hash
+- LeetCode
+    - [349 - Intersection of Two Arrays](src/com/algorithms/hash/IntersectionOfTwoArrays.java) [[Link](https://leetcode.com/problems/intersection-of-two-arrays/)]
+    - [350 - Intersection of Two Arrays II](src/com/algorithms/hash/IntersectionOfTwoArrays2.java) [[Link](https://leetcode.com/problems/intersection-of-two-arrays-ii/)]
+    
 #### Search
 ##### [Binary Search](src/com/algorithms/search/binary/BinarySearch.java) 
 - LeetCode
