@@ -18,7 +18,7 @@ import java.util.*;
  *      What if the given array is already sorted? How would you optimize your algorithm?
  *      What if nums1's size is small compared to nums2's size? Which algorithm is better?
  *      What if elements of nums2 are stored on disk, 
- *      and the memory is limited such that you cannot load all elements into the memory at once?
+ *      and the memory is limited such that you cannot load all elements into the memory at once? TODO
  */
 public class IntersectionOfTwoArrays2 {
     
@@ -27,10 +27,32 @@ public class IntersectionOfTwoArrays2 {
             return new int[0];
         }
         Arrays.sort(nums1);
-        Map<Integer, Integer> map = new HashMap<>();
-        for (int i=0;i<nums1.length;i++) {
-            
+        Arrays.sort(nums2);
+
+        int[] results = new int[nums1.length > nums2.length ? nums2.length : nums1.length];
+        int index1 = 0;
+        int index2 = 0;
+        int indexR = 0;
+        while (index1 < nums1.length && index2 < nums2.length) {
+            if (nums1[index1] < nums2[index2]) {
+                index1++;
+            } else if (nums1[index1] > nums2[index2]) {
+                index2++;
+            } else {
+                results[indexR] = nums1[index1];
+                index1++;
+                index2++;
+                indexR++;
+            }
         }
-        int size = 
+        if (indexR == results.length) {
+            return results;
+
+        } else if (indexR == 0) {
+            return new int[0];
+
+        } else {
+            return Arrays.copyOf(results, indexR);
+        }
     }
 }

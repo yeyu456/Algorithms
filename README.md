@@ -31,6 +31,8 @@ Source of exercises:
     - [167 - Two Sum II - Input array is sorted](src/com/algorithms/search/binary/TwoSum2.java) [[Link](https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/)]
     - [174 - Dungeon Game](src/com/algorithms/search/binary/DungeonGame.java) [[Link](https://leetcode.com/problems/dungeon-game/)] __TODO__
     - [278 - First Bad Version](src/com/algorithms/search/binary/FirstBadVersion.java) [[Link](https://leetcode.com/problems/first-bad-version/)]
+    - [374 - Guess Number Higher or Lower](src/com/algorithms/search/binary/GuessNumberHigherOrLower.java) [[Linke](https://leetcode.com/problems/guess-number-higher-or-lower/)]
+    - [441 - Arranging Coins](src/com/algorithms/search/binary/ArrangingCoins.java) [[Link](https://leetcode.com/problems/arranging-coins/)]
     
 ##### Two Pointers
 - LeetCode
