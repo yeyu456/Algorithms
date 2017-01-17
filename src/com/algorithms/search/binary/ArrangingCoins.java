@@ -30,33 +30,37 @@ public class ArrangingCoins {
 
     public static int arrangeCoins(int n) {
         if (n <= 0) {
-            throw new IllegalArgumentException("Invalid n");
+            return 0;
         }
-        long kth = n;
-        while (true) {
-            long nextStair = kth * (kth + 1) / 2;
-            if (nextStair > n) {
-                kth >>= 1;
-
+        long start = 1;
+        long end = n;
+        while (start <= end) {
+            long mid = start + (end - start) / 2;
+            long lastStair = mid * (mid - 1) / 2;
+            long nextStair = (mid + 1) * mid / 2;
+            if (lastStair <= n && nextStair > n) {
+                return (int) (mid - 1);
+                
             } else if (nextStair == n) {
-                break;
-
+                return (int) (mid);
+                
+            } else if (lastStair > n) {
+                end = mid - 1;
+                
             } else {
-                long lastStair = (kth - 1) * kth / 2;
-                if (lastStair > n) {
-                    kth = lastStair + (nextStair - lastStair) / 2;
-                } else if (lastStair == n) {
-                    kth += 1;
-                    break;
-                } else {
-                    break;
-                }
+                start = mid + 1;
             }
         }
-        return (int) kth;
+        return 0;
+    }
+    
+    public static int arrangeCoins2(int n) {
+        return (int) ((Math.sqrt(1 + 8 * ((long)n)) - 1) / 2);
     }
 
     public static void main(String[] args) {
-        System.out.println(arrangeCoins(3));
+        for (long i = Integer.MAX_VALUE - 10; i <= Integer.MAX_VALUE; i++) {
+            arrangeCoins((int)i);
+        }
     }
 }

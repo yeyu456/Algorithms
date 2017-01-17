@@ -8,6 +8,10 @@ Source of exercises:
 - [LintCode](http://www.lintcode.com/en/)
 
 ## Indexes
+#### Sort
+- LeetCode
+    - [147 - Insertion Sort List]() [[Link](https://leetcode.com/problems/insertion-sort-list/)]
+    
 #### Hash
 - LeetCode
     - [349 - Intersection of Two Arrays](src/com/algorithms/hash/IntersectionOfTwoArrays.java) [[Link](https://leetcode.com/problems/intersection-of-two-arrays/)]
@@ -33,11 +37,13 @@ Source of exercises:
     - [278 - First Bad Version](src/com/algorithms/search/binary/FirstBadVersion.java) [[Link](https://leetcode.com/problems/first-bad-version/)]
     - [374 - Guess Number Higher or Lower](src/com/algorithms/search/binary/GuessNumberHigherOrLower.java) [[Linke](https://leetcode.com/problems/guess-number-higher-or-lower/)]
     - [441 - Arranging Coins](src/com/algorithms/search/binary/ArrangingCoins.java) [[Link](https://leetcode.com/problems/arranging-coins/)]
+    - [475 - Heaters](src/com/algorithms/search/binary/Heaters.java) [[Link](https://leetcode.com/problems/heaters/)]
     
-##### Two Pointers
+#### Two Pointers
 - LeetCode
+    - [75 - Sort Colors](src/com/algorithms/sort/SortColors.java) [[Link](https://leetcode.com/problems/sort-colors/)]
     - [209 - Minimum Size Subarray Sum](src/com/algorithms/search/twopointer/MinimumSizeSubarraySum.java) [[Link](https://leetcode.com/problems/minimum-size-subarray-sum/)]
-
+    
 #### Tree
 - LeetCode
     - [222 - Count Complete Tree Nodes](src/com/algorithms/tree/CountCompleteTreeNodes.java) [[Link](https://leetcode.com/problems/count-complete-tree-nodes/)]
