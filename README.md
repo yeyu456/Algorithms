@@ -12,6 +12,7 @@ Source of exercises:
 - LeetCode
     - [147 - Insertion Sort List](src/com/algorithms/sort/InsertionSortList.java) [[Link](https://leetcode.com/problems/insertion-sort-list/)]
     - [148 - Sort List](src/com/algorithms/sort/SortList.java) [[Link](https://leetcode.com/problems/sort-list/)]
+    - [242 - Valid Anagram](src/com/algorithms/sort/ValidAnagram.java) [[Link](https://leetcode.com/problems/valid-anagram/)]
     
 #### Hash
 - LeetCode
